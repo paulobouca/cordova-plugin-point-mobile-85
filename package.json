@@ -1,0 +1,24 @@
+{
+    "name": "cordova-plugin-point-mobile-85",
+    "description": "Cordova barcode scanning plugin for Point Mobile 85 devices",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/paulobouca/cordova-plugin-point-mobile-85"
+    },
+    "author": {
+        "name": "Paulo Bouça",
+        "email": "p.a.bouca@gmail.com"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/paulobouca/cordova-plugin-point-mobile-85/issues"
+    },
+    "keywords": [
+        "cordova",
+        "cordova-android",
+        "barcode",
+        "scanner",
+        "point-mobile"
+    ]
+}

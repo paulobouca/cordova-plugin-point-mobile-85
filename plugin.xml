@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="cordova-plugin-point-mobile-85" version="1.0.0"
+    xmlns="http://cordova.apache.org/ns/plugins/1.0">
+    <name>Cordova Plugin Point Mobile 85</name>
+    <description>Cordova barcode scanning plugin for Point Mobile 85 devices</description>
+    <license>MIT</license>
+    <keywords>cordova,cordova-android,barcode,scanner,point-mobile-85</keywords>
+    
+    <js-module name="pointmobile85" src="www/pointmobile85.js">
+        <clobbers target="cordova.plugins.pointmobile85" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="PointMobile85">
+                <param name="android-package" value="com.paulobouca.PointMobile85" />
+            </feature>
+        </config-file>
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <receiver android:enabled="true" android:exported="false" android:name="com.paulobouca.PointMobile85$ScanResultReceiver" android:priority="0">
+                <intent-filter>
+                    <action android:name="device.common.USERMSG" />
+                </intent-filter>
+            </receiver>
+        </config-file>
+        <source-file src="src/android/libs/device.sdk.jar" target-dir="libs" />
+        <source-file src="src/android/PointMobile85.java" target-dir="src/com/paulobouca" />
+    </platform>
+</plugin>
